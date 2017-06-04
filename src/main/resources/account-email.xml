@@ -19,4 +19,9 @@
             </props>
         </property>
     </bean>
+
+    <bean id="accountEmailService" class="com.adelmo.account.email.AccountEmailServiceImpl">
+        <property name="javaMailSender" ref="javaMailSender"/>
+        <property name="systemEmail" value="${email.systemEmail}"/>
+    </bean>
 </beans>
